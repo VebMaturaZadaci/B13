@@ -1,0 +1,20 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+<form method="post">
+    <div class="form-group">
+        <label for="unetoIme">Ime</label>
+        <select id="unetoIme" name="unetoIme" class="form-control" asp-for="UnetoIme" asp-items="Model.Imena">
+            <option value="">Izaberite ime</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="unetoPrezime">Prezime</label>
+        <select id="unetoPrezime" name="unetoPrezime" class="form-control" asp-for="UnetoPrezime" asp-items="Model.Prezimena">
+            <option value="">Izaberite prezime</option>
+        </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Pronadji</button>
+</form>
